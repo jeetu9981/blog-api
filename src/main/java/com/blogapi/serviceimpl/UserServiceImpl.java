@@ -26,21 +26,21 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public boolean userRegister(User user){
-		System.out.println("INSIDE : ");
-		RestTemplate restTemplate=new RestTemplate();
+//		System.out.println("INSIDE : ");
+//		RestTemplate restTemplate=new RestTemplate();
+//		
+////		String s=restTemplate.getForObject("http://localhost:9090/order/getorder?userId=2",String.class);
+////		System.out.println("s : "+s);
+//		
+//		HttpHeaders headers = new HttpHeaders();
+//	      headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+//	      HttpEntity <String> entity = new HttpEntity<String>(headers);
+//	      
+//	      String s=restTemplate.exchange("http://localhost:9090/order/getorder?userId=2", HttpMethod.GET, entity,String.class).getBody();
+//	      System.out.println("s : "+s);
 		
-//		String s=restTemplate.getForObject("http://localhost:9090/order/getorder?userId=2",String.class);
-//		System.out.println("s : "+s);
-		
-		HttpHeaders headers = new HttpHeaders();
-	      headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-	      HttpEntity <String> entity = new HttpEntity<String>(headers);
-	      
-	      String s=restTemplate.exchange("http://localhost:9090/order/getorder?userId=2", HttpMethod.GET, entity,String.class).getBody();
-	      System.out.println("s : "+s);
-		
-//		if(this.userRepo.save(user)!=null)
-//			return true;
+		if(this.userRepo.save(user)!=null)
+			return true;
 	
 		return false;
 	}
